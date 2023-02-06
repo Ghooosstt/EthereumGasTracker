@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "EthereumGasTracker",
+    "description": "Chrome extension to track gas price of Ethereum mainnet",
+    "version": "1.0",
+    "action": {
+      "default_popup": "ethereum.html",
+      "default_icon": "images/icon-16.png"
+    }
+  }
