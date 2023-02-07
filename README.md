@@ -7,10 +7,10 @@ The goal of this project is to simulate in a browser plugin the same interface a
 
 ## Installation
 
-1. You will need an **Etherscan API key**. You can get one by creating your account and claiming your key [here](https://etherscan.io/myapikey).
-2. Clone the repository and replace `YOUR_API_KEY` in the **scripts/ethereum.js** file.
-3. Finally, install the plugin in your browser.
+1. Get your **Etherscan API key**. You can get one by creating your account and claiming your key on the [etherscan website](https://etherscan.io/myapikey).
+2. Download the plugin in the Chrome Web Store (soon).
+3. Configure your API key in the plugin options.
+4. Enjoy!
 
 ## Result
-
 ![image](demo.png)
