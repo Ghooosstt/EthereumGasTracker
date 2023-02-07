@@ -14,3 +14,7 @@ The goal of this project is to simulate in a browser plugin the same interface a
 
 ## Result
 ![image](demo.png)
+
+## Privacy
+This plugin does not use third-party analytics or advertising frameworks. It does not record any information about you and has no interest in doing so.
+**EthereumGasTracker does not collect, transmit, distribute or sell your data.**
