@@ -1,15 +1,24 @@
-var API_KEY = "YOUR_API_KEY"
+const getGasPrice = async function(apiKey) {
 
-const getGasPrice = async () => {
-
-    const response = await fetch('https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=' + API_KEY);
+    const response = await fetch('https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=' + apiKey);
     const myJson = await response.json();
     console.log(myJson);
 
-    var tableGasPrice = document.getElementById("gasprice");
-    tableGasPrice.rows[1].cells[0].innerHTML = myJson.result.SafeGasPrice + ' gwei';
-    tableGasPrice.rows[1].cells[1].innerHTML = myJson.result.ProposeGasPrice + ' gwei';
-    tableGasPrice.rows[1].cells[2].innerHTML = myJson.result.FastGasPrice + ' gwei';
+    if (myJson.message != "OK")
+    {
+        var checkApiKey = document.getElementById("checkApiKey");
+        checkApiKey.innerHTML = "<b>" + myJson.result + "<br><br>Check your API key in the plugin options</b>";
+        checkApiKey.hidden = false;
+    }
+    else
+    {
+        var tableGasPrice = document.getElementById("gasprice");
+        tableGasPrice.rows[1].cells[0].innerHTML = myJson.result.SafeGasPrice + ' gwei';
+        tableGasPrice.rows[1].cells[1].innerHTML = myJson.result.ProposeGasPrice + ' gwei';
+        tableGasPrice.rows[1].cells[2].innerHTML = myJson.result.FastGasPrice + ' gwei';
+    }
 }
 
-getGasPrice();
+chrome.storage.sync.get(['apiKey'], function(work) {
+    getGasPrice(work.apiKey);
+});
