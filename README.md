@@ -8,7 +8,7 @@ The goal of this project is to simulate in a browser plugin the same interface a
 ## Installation
 
 1. Get your **Etherscan API key**. You can get one by creating your account and claiming your key on the [etherscan website](https://etherscan.io/myapikey).
-2. Download the plugin in the Chrome Web Store (soon).
+2. Download the plugin in the Chrome Web Store [here](https://chromewebstore.google.com/detail/ethereumgastracker/clolhlfckcnabmkhanfdocfddkbkkegk).
 3. Configure your API key in the plugin options.
 4. Enjoy!
 
